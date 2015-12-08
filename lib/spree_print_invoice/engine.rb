@@ -2,7 +2,7 @@ module SpreePrintInvoice
   class Engine < Rails::Engine
     engine_name 'spree_print_invoice'
     
-    initializer "spree.print_invoice.environment", :before => :load_config_initializers do |app|
+    initializer "spree.print_invoice.environment", before: :load_config_initializers do |app|
       Spree::PrintInvoice::Config = Spree::PrintInvoiceConfiguration.new
     end
     

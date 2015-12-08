@@ -26,7 +26,7 @@ load File.dirname(__FILE__) + '/../init.rb'
 class PrawnHandlerTest < Test::Unit::TestCase
   def test_compatibility_with_action_view
     view = ActionView::Base.new
-    result = view.render :file => File.dirname(__FILE__) + '/test.pdf.prawn'
+    result = view.render file: File.dirname(__FILE__) + '/test.pdf.prawn'
     assert_equal "[:explicit_call, :implicit_call]", result
   end
 end

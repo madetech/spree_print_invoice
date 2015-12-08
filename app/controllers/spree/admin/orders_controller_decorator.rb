@@ -11,7 +11,7 @@ Spree::Admin::OrdersController.class_eval do
           @order.invoice_date = Date.today
           @order.save!
         end
-        render :layout => false , :template => "spree/admin/orders/#{template}.pdf.prawn"
+        render layout: false , template: "spree/admin/orders/#{template}.pdf.prawn"
       end
     end
   end
